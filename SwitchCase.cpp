@@ -4,7 +4,7 @@ using namespace std;
 // Deklarasi variabel global
 int kodeJurusan;
 string namaJurusan;
-string statusKota;
+string statusKouta;
 
 //prosedur input
 void input (){
@@ -15,4 +15,25 @@ void input (){
     cout << "------------------------------" << endl;
     cout << "Masukkan kode jurusan (1-3): ";
     cin >> kodeJurusan;
+}
+
+//prosedur untuk pengecekan kondisi
+void pilihanJurusan(){
+    switch (kodeJurusan) {
+        case 1:
+            namaJurusan = "Teknologi Informasi";
+            statusKouta = "Tersedia (15 kursi)";
+            break;
+        case 2:
+            namaJurusan = "Teknik Elektro";
+            statusKouta = "Kuota Penuh";
+            break;
+        case 3:
+            namaJurusan = "Sistem Informasi";
+            statusKouta = "Tersedia (5 kursi)";
+            break;
+        default:
+            namaJurusan = "Tidak Diketahui";
+            statusKouta = "Error: Kode Tidak Valid";
+    }
 }
